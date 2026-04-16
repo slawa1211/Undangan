@@ -1,40 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ravina Undangan Digital</title>
+
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+<style>
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
 }
 
+/* BODY */
 body {
-    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 
 /* HERO */
 .hero {
-    background: url('https://images.unsplash.com/photo-1522673607200-164d1b6ce486') no-repeat center/cover;
     height: 100vh;
+    background: url('https://images.unsplash.com/photo-1519741497674-611481863552') center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    color: white;
 }
 
 /* OVERLAY */
 .overlay {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 40px;
-    text-align: center;
-    color: white;
-    border-radius: 15px;
+    background: rgba(0,0,0,0.5);
+    padding: 50px;
+    border-radius: 20px;
+    animation: fadeIn 2s ease;
 }
 
 .overlay h3 {
     font-weight: 300;
-    margin-bottom: 10px;
+    letter-spacing: 2px;
 }
 
 .overlay h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+    margin: 15px 0;
 }
 
 .overlay p {
@@ -43,12 +57,11 @@ body {
 
 /* BUTTON */
 button {
-    padding: 12px 25px;
+    padding: 12px 30px;
     border: none;
     background: gold;
-    color: black;
+    border-radius: 30px;
     font-weight: bold;
-    border-radius: 25px;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -56,3 +69,58 @@ button {
 button:hover {
     background: white;
 }
+
+/* SECTION */
+.section {
+    padding: 80px 20px;
+    text-align: center;
+    display: none;
+}
+
+.section h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- HALAMAN AWAL -->
+<section class="hero" id="cover">
+    <div class="overlay">
+        <h3>The Wedding Of</h3>
+        <h1>Yusuf & Dita</h1>
+        <p>10 Oktober 2026</p>
+        <button onclick="openInvitation()">Buka Undangan</button>
+    </div>
+</section>
+
+<!-- HALAMAN ISI -->
+<section class="section" id="content">
+    <h2>Assalamu’alaikum</h2>
+    <p>Dengan hormat kami mengundang Anda untuk hadir di acara pernikahan kami.</p>
+
+    <h2>Yusuf & Dita</h2>
+    <p>10 Oktober 2026</p>
+
+    <h2>Lokasi</h2>
+    <p>Medan, Sumatera Utara</p>
+</section>
+
+<script>
+function openInvitation() {
+    document.getElementById("cover").style.display = "none";
+    document.getElementById("content").style.display = "block";
+}
+</script>
+
+</body>
+</html>
