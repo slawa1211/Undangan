@@ -1,88 +1,58 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Undangan Digital</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #ffe6f0, #e6f7ff);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
 
-    .card {
-      background: white;
-      padding: 30px;
-      border-radius: 20px;
-      width: 90%;
-      max-width: 400px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-      text-align: center;
-      animation: fadeIn 1.2s ease-in-out;
-    }
+body {
+    height: 100vh;
+}
 
-    h1 {
-      color: #e91e63;
-      margin-bottom: 10px;
-    }
+/* HERO */
+.hero {
+    background: url('https://images.unsplash.com/photo-1522673607200-164d1b6ce486') no-repeat center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    .nama {
-      font-size: 22px;
-      font-weight: bold;
-      margin: 10px 0;
-    }
+/* OVERLAY */
+.overlay {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    text-align: center;
+    color: white;
+    border-radius: 15px;
+}
 
-    .detail {
-      font-size: 14px;
-      color: #555;
-      line-height: 1.6;
-    }
+.overlay h3 {
+    font-weight: 300;
+    margin-bottom: 10px;
+}
 
-    .btn {
-      margin-top: 20px;
-      display: inline-block;
-      padding: 10px 20px;
-      background: #e91e63;
-      color: white;
-      text-decoration: none;
-      border-radius: 10px;
-      transition: 0.3s;
-    }
+.overlay h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
 
-    .btn:hover {
-      background: #c2185b;
-    }
+.overlay p {
+    margin-bottom: 20px;
+}
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
-</head>
+/* BUTTON */
+button {
+    padding: 12px 25px;
+    border: none;
+    background: gold;
+    color: black;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
-<body>
-
-  <div class="card">
-    <h1>Undangan Pernikahan</h1>
-    <div class="nama">Aulia & Rizky</div>
-
-    <p class="detail">
-      Dengan hormat, kami mengundang Anda untuk hadir pada acara pernikahan kami:<br><br>
-
-      📅 Sabtu, 10 Mei 2026<br>
-      🕐 10.00 WIB - selesai<br>
-      📍 Gedung Serbaguna Bahagia
-    </p>
-
-    <a class="btn" href="https://maps.google.com" target="_blank">
-      Lihat Lokasi
-    </a>
-  </div>
-
-</body>
-</html>
+button:hover {
+    background: white;
+}
